@@ -32,21 +32,28 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    
+
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+        window.removeEventListener('resize', handleWindowSizeChange);
+    }
+
+  }, []);
+
+  useEffect(() => {
+    
     AOS.init({
       duration: 500,
     });
+
   }, []);
 
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(0);
 function handleWindowSizeChange() {
         setWidth(window.innerWidth);
     }
-useEffect(() => {
-        window.addEventListener('resize', handleWindowSizeChange);
-        return () => {
-            window.removeEventListener('resize', handleWindowSizeChange);
-        }
-    }, []);
+
 
   return (
     <Main
@@ -111,12 +118,12 @@ useEffect(() => {
             </p>
           </div>
           <div className="right">
-            <img src="feed.svg" width="70%" />
+            <img src="feed.png" width="70%" />
           </div>
         </div>
         <div className="row reverse" data-aos="fade-up">
           <div className="left">
-            <img src="dancer.svg" width="70%" />
+            <img src="dancer.png" width="70%" />
           </div>
           <div className="right">
             <h1>Record Video!</h1>
@@ -149,12 +156,12 @@ useEffect(() => {
             </p>
           </div>
           <div className="right">
-            <img src="challenges.svg" width="70%" />
+            <img src="challenges.png" width="70%" />
           </div>
         </div>
         <div data-aos="fade-up">
           <h1>See it in action</h1>
-          <img src="placeholder.svg" width="100%" />
+          <img src="placeholder.png" width="100%" />
         </div>
       </div>
       <footer>

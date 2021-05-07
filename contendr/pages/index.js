@@ -1,73 +1,165 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Logo from '../comps/Logo'
-import WordWheel from '../comps/WordWheel'
-import Switch from '../comps/Switch'
-import React, {useState} from 'react';
-import Main from '../comps/Main'
+import Head from "next/head";
+import Image from "next/image";
+import Logo from "../comps/Logo";
+import WordWheel from "../comps/WordWheel";
+import Switch from "../comps/Switch";
+import React, { useState, useEffect } from "react";
+import Main from "../comps/Main";
+import { PathOne } from "../comps/PathOne";
+import { PathTwo } from "../comps/PathTwo";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
-  const [darkstate, setDark] = useState(false)
-  
+  const [darkstate, setDark] = useState(false);
+
   const HandleSwitch = () => {
-    setDark(!darkstate)
-  }
+    setDark(!darkstate);
+  };
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+    });
+  }, []);
+
+  const [width, setWidth] = useState(window.innerWidth);
+function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
+    }
+useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
 
   return (
-    <Main background={darkstate ? "linear-gradient(180deg, #5177FF 0%, #55C2FF 100%)" : "linear-gradient(180deg, #FF85DD 0%, #FFA4E5 100%)"}>
+    <Main
+      background={
+        darkstate
+          ? "linear-gradient(180deg, #5177FF 0%, #55C2FF 100%)"
+          : "linear-gradient(180deg, #FF85DD 0%, #FFA4E5 100%)"
+      }
+    >
+      <PathOne 
+      top={width < 1000 ? '2500px' : '1500px' }
+      scrollPosition={scrollPosition} left="-20vw"/>
+      <PathTwo
+        scrollPosition={scrollPosition}
+        left="-20vw"
+        top={width < 1000 ? '4000px' : '2750px' }
+        text="record a video record a video record a video record a video record a video record a video "
+      />
+      <PathOne
+        scrollPosition={scrollPosition}
+        left="-20vw"
+        top={width < 1000 ? '5500px' : '4000px' }
+        text="accept challenges accept challenges accept challenges accept challenges accept challenges "
+      />
+
       <div className="content">
         <div className="nav">
           <Logo />
-        <Switch 
-        backgroundColor={darkstate ? "#FF85DD" : "#5177FF"}
-        left={darkstate ? 28 : 2}
-        onClick={HandleSwitch}
-        />
+          <Switch
+            backgroundColor={darkstate ? "#FF85DD" : "#5177FF"}
+            left={darkstate ? 28 : 2}
+            onClick={HandleSwitch}
+          />
         </div>
-        
-        <div className="row">
+
+        <div className="row hero" data-aos="fade-up">
           <div className="left">
-            <h1>Challenge <br></br> your <br></br> friends!</h1>
+            <h1 className="hero-text">
+              Challenge <br></br> your <br></br> friends!
+            </h1>
           </div>
           <div className="right">
-            <WordWheel/>
+            <WordWheel />
           </div>
         </div>
-        <div className="row">
+
+        <div className="row" data-aos="fade-up">
           <div className="left">
-            <h1>Challenge <br></br> your friends!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac ultricies libero. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Pellentesque vitae nisi pharetra, hendrerit est at, euismod neque. Nam aliquet scelerisque justo ut pellentesque. Morbi eget lacus vitae felis finibus dictum. Morbi tempus ipsum ex. Etiam pharetra est a diam finibus aliquet. Integer blandit bibendum mi, quis ornare tortor tincidunt sit amet. Aliquam erat volutpat.</p>
+            <h1>
+              Challenge <br></br> your friends!
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              ac ultricies libero. Nulla facilisi. Interdum et malesuada fames
+              ac ante ipsum primis in faucibus. In hac habitasse platea
+              dictumst. Pellentesque vitae nisi pharetra, hendrerit est at,
+              euismod neque. Nam aliquet scelerisque justo ut pellentesque.
+              Morbi eget lacus vitae felis finibus dictum. Morbi tempus ipsum
+              ex. Etiam pharetra est a diam finibus aliquet. Integer blandit
+              bibendum mi, quis ornare tortor tincidunt sit amet. Aliquam erat
+              volutpat.
+            </p>
           </div>
           <div className="right">
-            <img src="feed.svg" width="70%"/>
+            <img src="feed.svg" width="70%" />
           </div>
         </div>
-        <div className="row">
+        <div className="row reverse" data-aos="fade-up">
           <div className="left">
-            <img src="dancer.svg" width="70%"/>
+            <img src="dancer.svg" width="70%" />
           </div>
           <div className="right">
             <h1>Record Video!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac ultricies libero. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Pellentesque vitae nisi pharetra, hendrerit est at, euismod neque. Nam aliquet scelerisque justo ut pellentesque. Morbi eget lacus vitae felis finibus dictum. Morbi tempus ipsum ex. Etiam pharetra est a diam finibus aliquet. Integer blandit bibendum mi, quis ornare tortor tincidunt sit amet. Aliquam erat volutpat.</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              ac ultricies libero. Nulla facilisi. Interdum et malesuada fames
+              ac ante ipsum primis in faucibus. In hac habitasse platea
+              dictumst. Pellentesque vitae nisi pharetra, hendrerit est at,
+              euismod neque. Nam aliquet scelerisque justo ut pellentesque.
+              Morbi eget lacus vitae felis finibus dictum. Morbi tempus ipsum
+              ex. Etiam pharetra est a diam finibus aliquet. Integer blandit
+              bibendum mi, quis ornare tortor tincidunt sit amet. Aliquam erat
+              volutpat.
+            </p>
           </div>
         </div>
-        <div className="row">
+        <div className="row" data-aos="fade-up">
           <div className="left">
             <h1>Start a challenge!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac ultricies libero. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Pellentesque vitae nisi pharetra, hendrerit est at, euismod neque. Nam aliquet scelerisque justo ut pellentesque. Morbi eget lacus vitae felis finibus dictum. Morbi tempus ipsum ex. Etiam pharetra est a diam finibus aliquet. Integer blandit bibendum mi, quis ornare tortor tincidunt sit amet. Aliquam erat volutpat.</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              ac ultricies libero. Nulla facilisi. Interdum et malesuada fames
+              ac ante ipsum primis in faucibus. In hac habitasse platea
+              dictumst. Pellentesque vitae nisi pharetra, hendrerit est at,
+              euismod neque. Nam aliquet scelerisque justo ut pellentesque.
+              Morbi eget lacus vitae felis finibus dictum. Morbi tempus ipsum
+              ex. Etiam pharetra est a diam finibus aliquet. Integer blandit
+              bibendum mi, quis ornare tortor tincidunt sit amet. Aliquam erat
+              volutpat.
+            </p>
           </div>
           <div className="right">
-            <img src="challenges.svg" width="70%"/>
+            <img src="challenges.svg" width="70%" />
           </div>
         </div>
-        <div>
+        <div data-aos="fade-up">
           <h1>See it in action</h1>
-          <img src="placeholder.svg" width="90%"/>
+          <img src="placeholder.svg" width="100%" />
         </div>
       </div>
       <footer>
         <img src="icon.svg" width="30vw"></img>
       </footer>
     </Main>
-  )
+  );
 }

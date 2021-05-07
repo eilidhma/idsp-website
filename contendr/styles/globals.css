@@ -18,7 +18,7 @@ body {
 display: flex;
 flex-direction: column;
 width: 80vw;
-
+z-index: 200;;
 margin-top: 100px;
 }
 
@@ -83,4 +83,49 @@ footer {
   to {
     transform: scale(0.7)
   }
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    
+    
+  }
+  
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    padding: 0;
+    
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 175vh;
+  }
+
+  .reverse{
+    flex-direction: column-reverse;
+  }
+
+  .hero{
+    height: 125vh;
+  }
+
+ 
+}
+
+.hero-text{
+
+  font-size: 72px;
+    
 }

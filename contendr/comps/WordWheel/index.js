@@ -6,6 +6,8 @@ const Cont = styled.div`
   justify-content:center;
   align-items:center;
   object-fit:cover;
+ 
+
 `;
 
 const Img = styled.img`

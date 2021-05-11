@@ -30,7 +30,7 @@ const Arrow = styled.img`
 
 export const PathOne = ({
   scrollPosition,
-  top = "150vh",
+  top = "80vh",
   left = "-20vw",
   text = "challenge your friends challenge your friends challenge your friends challenge your friends challenge your friends challenge your friends",
 }) => {

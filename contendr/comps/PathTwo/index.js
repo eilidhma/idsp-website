@@ -29,12 +29,12 @@ const Arrow = styled.img`
 
 export const PathTwo = ({
   scrollPosition,
-  top = "150vh",
+  bottom = "150vh",
   left = "-20vw",
   text = "challenge your friends challenge your friends challenge your friends challenge your friends challenge your friends challenge your friends",
 }) => {
   return (
-    <Cont style={{ top: top, left: left }}>
+    <Cont style={{ top: bottom, left: left }}>
       <svg
         width="200%"
         height="100%"

@@ -9,6 +9,7 @@ import { PathOne } from "../comps/PathOne";
 import { PathTwo } from "../comps/PathTwo";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { DownloadButton } from "../comps/DownloadButton";
 
 export default function Home() {
   const [darkstate, setDark] = useState(false);
@@ -32,28 +33,22 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    
-
-    window.addEventListener('resize', handleWindowSizeChange);
+    window.addEventListener("resize", handleWindowSizeChange);
     return () => {
-        window.removeEventListener('resize', handleWindowSizeChange);
-    }
-
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
   }, []);
 
   useEffect(() => {
-    
     AOS.init({
       duration: 500,
     });
-
   }, []);
 
   const [width, setWidth] = useState(0);
-function handleWindowSizeChange() {
-        setWidth(window.innerWidth);
-    }
-
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
 
   return (
     <Main
@@ -63,22 +58,6 @@ function handleWindowSizeChange() {
           : "linear-gradient(180deg, #FF85DD 0%, #FFA4E5 100%)"
       }
     >
-      <PathOne 
-      top={width < 1000 ? '2500px' : '1500px' }
-      scrollPosition={scrollPosition} left="-20vw"/>
-      <PathTwo
-        scrollPosition={scrollPosition}
-        left="-20vw"
-        top={width < 1000 ? '4000px' : '2750px' }
-        text="record a video record a video record a video record a video record a video record a video "
-      />
-      <PathOne
-        scrollPosition={scrollPosition}
-        left="-20vw"
-        top={width < 1000 ? '5500px' : '4000px' }
-        text="accept challenges accept challenges accept challenges accept challenges accept challenges "
-      />
-
       <div className="content">
         <div className="nav">
           <Logo />
@@ -95,16 +74,18 @@ function handleWindowSizeChange() {
               Challenge <br></br> your <br></br> friends!
             </h1>
           </div>
-          <div className="right">
+          <div
+            style={{ justifyContent: "space-between", alignItems: "center", }}
+            className="right"
+          >
             <WordWheel />
+            <DownloadButton darkstate={darkstate} backgroundColor={darkstate ? "#FF85DD" : "#5177FF"}/>
           </div>
         </div>
 
         <div className="row" data-aos="fade-up">
           <div className="left">
-            <h1>
-              Challenge <br></br> your friends!
-            </h1>
+            <h1>Challenge your friends!</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               ac ultricies libero. Nulla facilisi. Interdum et malesuada fames
@@ -120,6 +101,10 @@ function handleWindowSizeChange() {
           <div className="right">
             <img src="feed.png" width="70%" />
           </div>
+          <PathOne
+            scrollPosition={scrollPosition}
+            text="record a video record a video record a video record a video record a video record a video "
+          />
         </div>
         <div className="row reverse" data-aos="fade-up">
           <div className="left">
@@ -139,6 +124,10 @@ function handleWindowSizeChange() {
               volutpat.
             </p>
           </div>
+          <PathOne
+            scrollPosition={scrollPosition}
+            text="record a video record a video record a video record a video record a video record a video "
+          />
         </div>
         <div className="row" data-aos="fade-up">
           <div className="left">
@@ -158,6 +147,10 @@ function handleWindowSizeChange() {
           <div className="right">
             <img src="challenges.png" width="70%" />
           </div>
+          <PathOne
+            scrollPosition={scrollPosition}
+            text="record a video record a video record a video record a video record a video record a video "
+          />
         </div>
         <div data-aos="fade-up">
           <h1>See it in action</h1>

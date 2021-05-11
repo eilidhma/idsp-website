@@ -1,6 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 
 html,
 body {
@@ -15,14 +13,15 @@ body {
 }
 
 .content {
-display: flex;
-flex-direction: column;
-width: 80vw;
-z-index: 200;;
-margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  z-index: 200;
+  margin-top: 100px;
 }
 
-.left, .right {
+.left,
+.right {
   display: flex;
   flex: 1;
   object-fit: contain;
@@ -32,7 +31,6 @@ margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  
 }
 
 .right {
@@ -50,13 +48,13 @@ margin-top: 100px;
 }
 
 h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 3rem;
   align-self: flex-start;
 }
 
 p {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   padding-top: 50px;
 }
@@ -71,9 +69,18 @@ footer {
   margin-top: 200px;
 }
 
+.hero-text {
+  font-size: 6vw;
+  margin: 0;
+}
+
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes pulse {
@@ -81,10 +88,9 @@ footer {
     transform: scale(1);
   }
   to {
-    transform: scale(0.7)
+    transform: scale(0.7);
   }
 }
-
 
 @media only screen and (max-width: 1000px) {
   .left {
@@ -93,39 +99,40 @@ footer {
     justify-content: center;
     align-items: center;
     width: 80vw;
-    
-    
   }
-  
+
   .right {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 80vw;
     padding: 0;
-    
   }
-  
+
   .row {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    height: 175vh;
+    margin: 0 0 10vh 0;
   }
 
-  .reverse{
+  .reverse {
     flex-direction: column-reverse;
   }
 
-  .hero{
+  .hero {
     height: 125vh;
   }
 
- 
+  p {
+    margin: 0 0 10vh 0;
+  }
+
+  .hero-text {
+    font-size: 15vw;
+    width: 80vw;
+  }
 }
 
-.hero-text{
-
-  font-size: 72px;
-    
+img {
+  z-index: 1000;
 }

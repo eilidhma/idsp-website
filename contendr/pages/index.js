@@ -10,6 +10,7 @@ import { PathTwo } from "../comps/PathTwo";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { DownloadButton } from "../comps/DownloadButton";
+import { Form } from "../comps/Form";
 
 export default function Home() {
   const [darkstate, setDark] = useState(false);
@@ -68,18 +69,24 @@ export default function Home() {
           />
         </div>
 
-        <div className="row hero" data-aos="fade-up">
-          <div className="left">
+        <div style={{margin: '10vh 0 0 0', display: 'flex', flexDirection: 'column', }} data-aos="fade-up">
+          <div style={{display: 'flex', flexDirection: 'row', }}>
             <h1 className="hero-text">
-              Challenge <br></br> your <br></br> friends!
+              Challenge <br/> Your <br/> Friends!
             </h1>
+            <div style={{display: 'flex', flexDirection: 'row', justifyContent: "flex-end", alignItems: "flex-end", width: '100%'}}>
+            <DownloadButton/>
+            </div>
           </div>
+
+          
           <div
-            style={{ justifyContent: "space-between", alignItems: "center", }}
-            className="right"
+            style={{ display: 'flex', justifyContent: "center", alignItems: "center", flexDirection: 'column', width: '100%'}}
           >
+          
+            
             <WordWheel />
-            <DownloadButton darkstate={darkstate} backgroundColor={darkstate ? "#FF85DD" : "#5177FF"}/>
+            
           </div>
         </div>
 
@@ -156,7 +163,43 @@ export default function Home() {
           <h1>See it in action</h1>
           <img src="placeholder.png" width="100%" />
         </div>
+        <div className="row" style={{flexDirection: 'column'}} data-aos="fade-up">
+         
+            <h1>The Team</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              ac ultricies libero. Nulla facilisi. Interdum et malesuada fames
+              ac ante ipsum primis in faucibus. In hac habitasse platea
+              dictumst. Pellentesque vitae nisi pharetra, hendrerit est at,
+              euismod neque. Nam aliquet scelerisque justo ut pellentesque.
+              Morbi eget lacus vitae felis finibus dictum. Morbi tempus ipsum
+              ex. Etiam pharetra est a diam finibus aliquet. Integer blandit
+              bibendum mi, quis ornare tortor tincidunt sit amet. Aliquam erat
+              volutpat.
+            </p>
+     
+          <div style={{ margin: '50px 0 0 0 ', display: 'grid', gridTemplateColumns: 'auto auto auto', gridTemplateRows: 'auto auto', justifyContent: 'space-between'}}>
+
+            <img width="100px" src="/dancer.png"/>
+            <img width="100px" src="/dancer.png"/>
+            <img width="100px" src="/dancer.png"/>
+            <img width="100px" src="/dancer.png"/>
+            <img width="100px" src="/dancer.png"/>
+            <img width="100px" src="/dancer.png"/>
+            
+          </div>
+        </div>
+
+
+        <div className="row" style={{flexDirection: 'column'}} data-aos="fade-up">
+         
+         <h1>Contact Us</h1>
+  
+  <Form/>
+  
+     </div>
       </div>
+      
       <footer>
         <img src="icon.svg" width="30vw"></img>
       </footer>

@@ -43,7 +43,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-top: 100px;
+  margin-top: 10vh;
   margin-bottom: 100px;
 }
 
@@ -135,4 +135,21 @@ footer {
 
 img {
   z-index: 1000;
+}
+
+
+@keyframes float {
+  from{
+    transform: translateY(-10vh);
+
+  }
+
+  50%{
+    transform: translateY(0);
+  }
+
+  to{
+    transform: translateY(-10vh);
+  }
+
 }

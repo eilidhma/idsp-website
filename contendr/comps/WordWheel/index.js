@@ -10,6 +10,7 @@ width: 10vw;
   position: absolute;
   right: -2.5vw;
   bottom: 5vh;
+  min-width: 100px;
 
 `;
 

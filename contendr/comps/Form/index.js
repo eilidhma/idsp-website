@@ -74,13 +74,14 @@ justify-content: center;
 align-items: center;
 
 resize: none; /*remove the resize handle on the bottom right*/
-box-shadow: 4px 4px 10px white;
+
 width: 100%;
 height: 100px;
 font-size: 18px;
 width: 100%;
 font-family: "Poppins", sans-serif;
 color: white;
+box-shadow: 4px 4px 10px white;
 transition: 0.5s ease;
 cursor: pointer;
 &:hover{

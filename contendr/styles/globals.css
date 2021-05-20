@@ -98,7 +98,72 @@ footer {
   }
 }
 
+.grid{
+  grid-template-columns: auto auto auto; 
+  grid-template-rows: auto auto ; 
+
+  height: 50vh; 
+  margin: 5vh 0 0 0;
+  display: grid; 
+  grid-gap: 25px;
+  justify-content: space-between;
+
+}
+
+.three-d{
+  position: relative;
+   width: 20vw; 
+   animation: float 4s ease infinite; 
+   z-index: 0;
+}
+
+.button-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
 @media only screen and (max-width: 1000px) {
+
+  .button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: 10vh 0 0 0;
+  }
+
+  .three-d{
+    position: absolute;
+     width: 50vw; 
+     animation: float 4s ease infinite; 
+     z-index: 0;
+     margin: 0 0 5vh 0;
+     top:10vh;
+     right: 0vw;
+  }
+  
+.grid{
+   grid-template-columns: auto; 
+   grid-template-rows: auto auto auto auto auto auto; 
+
+   min-height: 100vh; 
+
+   display: grid; 
+
+   justify-content: space-between;
+   margin: 0 0 25vh 0;
+
+}
+
+video{
+  margin: 0 0 25vh 0;
+}
+
   .left {
     display: flex;
     flex-direction: column;
@@ -118,7 +183,7 @@ footer {
   .row {
     display: flex;
     flex-direction: column;
-    margin: 0 0 10vh 0;
+    margin: 0 0 25vh 0;
   }
 
   .reverse {
@@ -127,6 +192,7 @@ footer {
 
   .hero {
     height: 125vh;
+    
   }
 
   p {

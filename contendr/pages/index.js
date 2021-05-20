@@ -70,15 +70,15 @@ export default function Home() {
           />
         </div>
 
-        <div style={{margin: '10vh 0 0 0', display: 'flex', flexDirection: 'column', }} data-aos="fade-up">
+        <div  style={{margin: '10vh 0 0 0', display: 'flex', flexDirection: 'column', }} data-aos="fade-up">
           <div className="row">
             <h1 className="hero-text">
               Challenge <br/> Your <br/> Friends!
             </h1>
 
-            <div style={{display: 'flex', flexDirection: 'column', justifyContent: "space-between", alignItems: "center", width: '100%'}}>
+            <div className="button-container">
             
-           <img style={{position: 'relative', width: '20vw', animation: 'float 4s ease infinite', zIndex: '0' }} src="/glass-c.png"/>
+           <img className="three-d"  src="/glass-c.png"/>
            <DownloadButton/>
 
            <WordWheel />
@@ -101,7 +101,7 @@ export default function Home() {
           </div>
           <PathOne
             scrollPosition={scrollPosition}
-            text="record a video record a video record a video record a video record a video record a video "
+            text="challenge your friends! challenge your friends! challenge your friends! challenge your friends!"
           />
         </div>
         <div className="row reverse" data-aos="fade-up">
@@ -116,7 +116,7 @@ export default function Home() {
           </div>
           <PathOne
             scrollPosition={scrollPosition}
-            text="record a video record a video record a video record a video record a video record a video "
+            text="record a video! record a video! record a video! record a video! record a video! record a video!"
           />
         </div>
         <div className="row" data-aos="fade-up">
@@ -131,7 +131,7 @@ export default function Home() {
           </div>
           <PathOne
             scrollPosition={scrollPosition}
-            text="record a video record a video record a video record a video record a video record a video "
+            text="start a challenge! start a challenge! start a challenge! start a challenge! "
           />
         </div>
         <div data-aos="fade-up">
@@ -145,7 +145,7 @@ export default function Home() {
               Contendr was designed and developed by six BCIT students in an interdisciplinary team. Eilidh, Julian, and Jesse are students in the Digital Design and Development program, and were the creative minds behind the concept. After months of hard work, they passed off their prototype to the talented developers Jojo, Octavio, and Sarah, who are students in the Full Stack Web Development program. In a few short weeks, the development team has brought the project to life. 
             </p>
      
-          <div style={{ height: '50vh', margin: '5vh 0 0 0 ', display: 'grid', gridTemplateColumns: 'auto auto auto', gridTemplateRows: 'auto auto', justifyContent: 'space-between'}}>
+          <div className="grid" style={{ }}>
 
             <Profile name="Jojo" role="Designer" src="/jojo.JPG"/>
             <Profile name="Octavio" role="Developer" src="/octavio.jpg" />

@@ -13,7 +13,7 @@ const Cont = styled.div`
   cursor: pointer;
   transition: 0.5s ease;
   z-index: 100;
-  background:${props=>props.background};
+  background:${props=>props.background}
   box-shadow: 4px 4px 10px white;
   transition: 0.5s ease;
   cursor: pointer;

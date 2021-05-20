@@ -169,7 +169,7 @@ export default function Home() {
       </div>
       
       <footer>
-        <h3>For educational purposes only</h3>
+        <h3>For educational purposes only	©</h3>
         <h3>2021</h3>
         <img src="icon.svg" width="30vw"></img>
       </footer>

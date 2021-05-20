@@ -8,9 +8,7 @@ const ImgCont = styled.div`
   align-items:flex-start;
   flex-direction:row;
   width: 100%;
-  border-radius:50%;
-  object-fit:cover;
- 
+  border-radius:
 
 
 
@@ -20,9 +18,8 @@ const ImgCont = styled.div`
 const Img = styled.img`
   display:flex;
   width:100%;
-  object-fit:cover;
-  border-radius:50%;
-  object-fit:cover;
+
+
   max-width:150px;
 
 `;

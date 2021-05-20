@@ -79,7 +79,7 @@ export default function Home() {
             <div className="button-container">
             
            <img className="three-d"  src="/glass-c.png"/>
-           <DownloadButton background={darkstate ? "linear-gradient(180deg, #FF85DD 0%, #FFA4E5 100%)" : "linear-gradient(180deg, #5177FF 0%, #55C2FF 100%)"}/>
+           <DownloadButton />
 
            <WordWheel />
             </div>

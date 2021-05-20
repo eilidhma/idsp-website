@@ -49,8 +49,7 @@ margin: 0 0 1vh 0;
 export const Profile = ({
   router = useRouter(),
   src="/jojo.jpg",
-  name="jojo",
-  role="Developer"
+  name="jojo"
 }) => {
   return <ImgCont>
     <Img src={src}/>

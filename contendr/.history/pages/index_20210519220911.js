@@ -152,7 +152,7 @@ export default function Home() {
             <Profile name="Sarah" role="Developer" src="/sarah.jpg" />
             <Profile name="Eilidh" role="Designer" src="/eilidh.jpg"/>
             <Profile name="Julian" role="Designer" src="/julian.jpg" />
-            <Profile name="Jesse" role="Designer" src="/jesse.jpg" />
+            <Profile name="Jesse" role="Designer" src="/octavio.jpg" />
        
             
           </div>
@@ -169,7 +169,6 @@ export default function Home() {
       </div>
       
       <footer>
-        <h3>For educational purposes only</h3>
         <img src="icon.svg" width="30vw"></img>
       </footer>
     </Main>

@@ -6,7 +6,10 @@ const Cont = styled.div`
   justify-content:center;
   align-items:center;
   object-fit:cover;
- 
+width: 10vw;
+  position: absolute;
+  right: -2.5vw;
+  bottom: 5vh;
 
 `;
 
@@ -14,6 +17,7 @@ const Img = styled.img`
   display:flex;
   animation: spin 7s linear infinite;
   width:70%;
+  
 `;
 
 const Arrow = styled.img`
@@ -21,16 +25,19 @@ const Arrow = styled.img`
   animation: pulse 1.5s alternate-reverse infinite;
   right:40%;
   width:10%;
+  
 `;
 
 
 const WordWheel = ({
   src="wordwheel.svg"
 }) => {
-  return <Cont>
+  return (
+  <Cont>
     <Img src={src}></Img>
     <Arrow src="arrow.svg"></Arrow>
   </Cont>
+  )
 }
 
 export default WordWheel;

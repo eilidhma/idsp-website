@@ -12,11 +12,14 @@ const Cont = styled.div`
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   transition: 0.5s ease;
+  z-index: 100;
 
+  box-shadow: 4px 4px 10px white;
+  transition: 0.5s ease;
+  cursor: pointer;
   &:hover{
-    box-shadow: inset 0 0 0 2em white;
-    color: ${props=>props.backgroundColor};
-
+    box-shadow: none;
+    
   }
  
 
@@ -49,7 +52,7 @@ export const DownloadButton = ({
 background : darkstate ? "linear-gradient(180deg, #FF85DD 0%, #FFA4E5 100%)" : "linear-gradient(180deg, #5177FF 0%, #55C2FF 100%)"
   }}
   >
-    download
+    visit the app!
   </Cont>
 }
 

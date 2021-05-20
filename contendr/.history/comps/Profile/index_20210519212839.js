@@ -50,7 +50,7 @@ export const Profile = ({
   router = useRouter(),
   src="/jojo.jpg",
   name="jojo",
-  role="Developer"
+  role="developer"
 }) => {
   return <ImgCont>
     <Img src={src}/>

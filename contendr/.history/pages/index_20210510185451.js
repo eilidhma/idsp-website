@@ -10,8 +10,6 @@ import { PathTwo } from "../comps/PathTwo";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { DownloadButton } from "../comps/DownloadButton";
-import { Form } from "../comps/Form";
-import { Profile } from '../comps/Profile'
 
 export default function Home() {
   const [darkstate, setDark] = useState(false);
@@ -70,30 +68,34 @@ export default function Home() {
           />
         </div>
 
-        <div style={{margin: '10vh 0 0 0', display: 'flex', flexDirection: 'column', }} data-aos="fade-up">
-          <div className="row">
+        <div className="row hero" data-aos="fade-up">
+          <div className="left">
             <h1 className="hero-text">
-              Challenge <br/> Your <br/> Friends!
+              Challenge <br></br> your <br></br> friends!
             </h1>
-
-            <div style={{display: 'flex', flexDirection: 'column', justifyContent: "space-between", alignItems: "center", width: '100%'}}>
-            
-           <img style={{position: 'relative', width: '20vw', animation: 'float 4s ease infinite', zIndex: '0' }} src="/glass-c.png"/>
-           <DownloadButton/>
-
-           <WordWheel />
-            </div>
           </div>
-
-          
-     
+          <div
+            style={{ justifyContent: "space-between", alignItems: "center", }}
+            className="right"
+          >
+            <WordWheel />
+            <DownloadButton darkstate={darkstate} backgroundColor={darkstate ? "#FF85DD" : "#5177FF"}/>
+          </div>
         </div>
 
         <div className="row" data-aos="fade-up">
           <div className="left">
             <h1>Challenge your friends!</h1>
             <p>
-              Welcome to the future of social media.<br></br>Contendr is a new, fresh, and innovative platform for challenging your friends! With six categories to choose from, Contendr offers the chance to awaken the competitive spirit in everyone. <br></br>Challenge your friends to a dance off, bake off, or paint off... and become a Contendr today!
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              ac ultricies libero. Nulla facilisi. Interdum et malesuada fames
+              ac ante ipsum primis in faucibus. In hac habitasse platea
+              dictumst. Pellentesque vitae nisi pharetra, hendrerit est at,
+              euismod neque. Nam aliquet scelerisque justo ut pellentesque.
+              Morbi eget lacus vitae felis finibus dictum. Morbi tempus ipsum
+              ex. Etiam pharetra est a diam finibus aliquet. Integer blandit
+              bibendum mi, quis ornare tortor tincidunt sit amet. Aliquam erat
+              volutpat.
             </p>
           </div>
           <div className="right">
@@ -111,7 +113,15 @@ export default function Home() {
           <div className="right">
             <h1>Record Video!</h1>
             <p>
-              With Contendr, users have the opportunity to upload video footage from their mobile, tablet, or desktop device and choose a fellow user to challenge. To keep things interesting, six categories are currently available to compete in: Dance, Art, Food, Sports, Gaming, and Miscellaneous. Just record, upload, and challenge your opponent! 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              ac ultricies libero. Nulla facilisi. Interdum et malesuada fames
+              ac ante ipsum primis in faucibus. In hac habitasse platea
+              dictumst. Pellentesque vitae nisi pharetra, hendrerit est at,
+              euismod neque. Nam aliquet scelerisque justo ut pellentesque.
+              Morbi eget lacus vitae felis finibus dictum. Morbi tempus ipsum
+              ex. Etiam pharetra est a diam finibus aliquet. Integer blandit
+              bibendum mi, quis ornare tortor tincidunt sit amet. Aliquam erat
+              volutpat.
             </p>
           </div>
           <PathOne
@@ -123,7 +133,15 @@ export default function Home() {
           <div className="left">
             <h1>Start a challenge!</h1>
             <p>
-              Contendr offers a new social media experience. Instead of passively scrolling through feeds and liking content, users have the opportunity to fully participate in the Contendr experience. By competing in challenges yourself, or voting for your favorite contender in your challenge feed, the experience is engaging and fun. 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              ac ultricies libero. Nulla facilisi. Interdum et malesuada fames
+              ac ante ipsum primis in faucibus. In hac habitasse platea
+              dictumst. Pellentesque vitae nisi pharetra, hendrerit est at,
+              euismod neque. Nam aliquet scelerisque justo ut pellentesque.
+              Morbi eget lacus vitae felis finibus dictum. Morbi tempus ipsum
+              ex. Etiam pharetra est a diam finibus aliquet. Integer blandit
+              bibendum mi, quis ornare tortor tincidunt sit amet. Aliquam erat
+              volutpat.
             </p>
           </div>
           <div className="right">
@@ -136,40 +154,10 @@ export default function Home() {
         </div>
         <div data-aos="fade-up">
           <h1>See it in action</h1>
-          <video width="100%" controls autostart  src="/ContendrFinal.mp4" type="video/mp4" />
+          <img src="placeholder.png" width="100%" />
         </div>
-        <div className="row" style={{flexDirection: 'column'}} data-aos="fade-up">
-         
-            <h1>The Team</h1>
-            <p>
-              Contendr was designed and developed by six BCIT students in an interdisciplinary team. Eilidh, Julian, and Jesse are students in the Digital Design and Development program, and were the creative minds behind the concept. After months of hard work, they passed off their prototype to the talented developers Jojo, Octavio, and Sarah, who are students in the Full Stack Web Development program. In a few short weeks, the development team has brought the project to life. 
-            </p>
-     
-          <div style={{ height: '50vh', margin: '5vh 0 0 0 ', display: 'grid', gridTemplateColumns: 'auto auto auto', gridTemplateRows: 'auto auto', justifyContent: 'space-between'}}>
-
-            <Profile name="Jojo" role="Designer" src="/jojo.JPG"/>
-            <Profile name="Octavio" role="Developer" src="/octavio.jpg" />
-            <Profile name="Sarah" role="Developer" src="/sarah.jpg" />
-            <Profile name="Eilidh" role="Designer" src="/eilidh.jpg"/>
-            <Profile name="Julian" role="Designer" src="/julian.jpg" />
-            <Profile name="Jesse" role="Designer" src="/jesse.jpg" />
-       
-            
-          </div>
-        </div>
-
-
-        <div className="row" style={{flexDirection: 'column'}} data-aos="fade-up">
-         
-         <h1>Contact Us</h1>
-  
-  <Form darkstate={darkstate}/>
-  
-     </div>
       </div>
-      
       <footer>
-        <h3>For educational purposes only</h3>
         <img src="icon.svg" width="30vw"></img>
       </footer>
     </Main>

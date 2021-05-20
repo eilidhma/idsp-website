@@ -123,7 +123,7 @@ export default function Home() {
           <div className="left">
             <h1>Start a challenge!</h1>
             <p>
-              Contendr offers a new social media experience. Instead of passively scrolling through feeds and liking content, users have the opportunity to fully participate in the Contendr experience. By competing in challenges yourself, or voting for your favorite contender in your challenge feed, the experience is engaging and fun. 
+              Contendr offers a new social media experience. Instead of passively scrolling through feeds and liking content, users have the opportunity to fully engage in the Contendr experience. By participating in challenges yourself, or voting for your favorite contender 
             </p>
           </div>
           <div className="right">
@@ -152,7 +152,7 @@ export default function Home() {
             <Profile name="Sarah" role="Developer" src="/sarah.jpg" />
             <Profile name="Eilidh" role="Designer" src="/eilidh.jpg"/>
             <Profile name="Julian" role="Designer" src="/julian.jpg" />
-            <Profile name="Jesse" role="Designer" src="/jesse.jpg" />
+            <Profile name="Jesse" role="Designer" src="/octavio.jpg" />
        
             
           </div>
@@ -169,7 +169,6 @@ export default function Home() {
       </div>
       
       <footer>
-        <h3>For educational purposes only</h3>
         <img src="icon.svg" width="30vw"></img>
       </footer>
     </Main>

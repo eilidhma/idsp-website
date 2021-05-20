@@ -13,7 +13,7 @@ const FormUI = styled.form`
 `;
 
 const LabelUI = styled.label`
-    font-size: 2vw;
+    font-size: 24px;
 `;
 
 const InputUI = styled.input`
@@ -33,6 +33,9 @@ border-bottom: 1px solid white;
 color: white;
 width: 100%;
 margin: 50px 0;
+font-size: 18px;
+width: 100%;
+font-family: "Poppins", sans-serif;
 `;
 
 const TextUI = styled.textarea`
@@ -50,32 +53,47 @@ resize: none; /*remove the resize handle on the bottom right*/
 
 border-bottom: 1px solid white;
 color: white;
+font-size: 18px;
 width: 100%;
+font-family: "Poppins", sans-serif;
+
 `;
 
-const SubmitUI = styled.input`
+const SubmitUI = styled.div`
 background: transparent;
-
+margin: 50px 0 0 0;
 border: none;
 overflow: auto;
 outline: none;
-
+border-radius: 10px;
 -webkit-box-shadow: none;
 -moz-box-shadow: none;
 box-shadow: none;
+display: flex;
+justify-content: center;
+align-items: center;
 
 resize: none; /*remove the resize handle on the bottom right*/
-
-border: 1px solid white;
-background: white;
+box-shadow: 4px 4px 10px white;
 width: 100%;
-height: 50px;
+height: 100px;
+font-size: 18px;
+width: 100%;
+font-family: "Poppins", sans-serif;
+color: white;
+transition: 0.5s ease;
+cursor: pointer;
+&:hover{
+  box-shadow: none;
+  
+}
 `;
 
 
 
 export const Form = ({
-  src="wordwheel.svg"
+  src="wordwheel.svg",
+  darkstate
 }) => {
   return <FormUI>
       <LabelUI>name</LabelUI>
@@ -85,7 +103,7 @@ export const Form = ({
 <LabelUI>message</LabelUI>
 <TextUI/>
 
-<SubmitUI type="submit"/>
+<SubmitUI type="submit" style={{background: darkstate ? "linear-gradient(180deg, #FF85DD 0%, #FFA4E5 100%)" : "linear-gradient(180deg, #5177FF 0%, #55C2FF 100%)"}}>Send Us a Message</SubmitUI>
 
   </FormUI>
 }

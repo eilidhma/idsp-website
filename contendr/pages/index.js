@@ -11,6 +11,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { DownloadButton } from "../comps/DownloadButton";
 import { Form } from "../comps/Form";
+import { Profile } from '../comps/Profile'
 
 export default function Home() {
   const [darkstate, setDark] = useState(false);
@@ -70,24 +71,22 @@ export default function Home() {
         </div>
 
         <div style={{margin: '10vh 0 0 0', display: 'flex', flexDirection: 'column', }} data-aos="fade-up">
-          <div style={{display: 'flex', flexDirection: 'row', }}>
+          <div className="row">
             <h1 className="hero-text">
               Challenge <br/> Your <br/> Friends!
             </h1>
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: "flex-end", alignItems: "flex-end", width: '100%'}}>
-            <DownloadButton/>
+
+            <div style={{display: 'flex', flexDirection: 'column', justifyContent: "space-between", alignItems: "center", width: '100%'}}>
+            
+           <img style={{position: 'relative', width: '20vw', animation: 'float 4s ease infinite', zIndex: '0' }} src="/glass-c.png"/>
+           <DownloadButton/>
+
+           <WordWheel />
             </div>
           </div>
 
           
-          <div
-            style={{ display: 'flex', justifyContent: "center", alignItems: "center", flexDirection: 'column', width: '100%'}}
-          >
-          
-            
-            <WordWheel />
-            
-          </div>
+     
         </div>
 
         <div className="row" data-aos="fade-up">
@@ -161,7 +160,7 @@ export default function Home() {
         </div>
         <div data-aos="fade-up">
           <h1>See it in action</h1>
-          <img src="placeholder.png" width="100%" />
+          <video width="100%" controls autostart  src="/ContendrFinal.mp4" type="video/mp4" />
         </div>
         <div className="row" style={{flexDirection: 'column'}} data-aos="fade-up">
          
@@ -178,14 +177,15 @@ export default function Home() {
               volutpat.
             </p>
      
-          <div style={{ margin: '50px 0 0 0 ', display: 'grid', gridTemplateColumns: 'auto auto auto', gridTemplateRows: 'auto auto', justifyContent: 'space-between'}}>
+          <div style={{ height: '50vh', margin: '5vh 0 0 0 ', display: 'grid', gridTemplateColumns: 'auto auto auto', gridTemplateRows: 'auto auto', justifyContent: 'space-between'}}>
 
-            <img width="100px" src="/dancer.png"/>
-            <img width="100px" src="/dancer.png"/>
-            <img width="100px" src="/dancer.png"/>
-            <img width="100px" src="/dancer.png"/>
-            <img width="100px" src="/dancer.png"/>
-            <img width="100px" src="/dancer.png"/>
+            <Profile name="Jojo Lam" role="Developer" src="/jojo.JPG"/>
+            <Profile name="Octavio" role="Developer" src="/octavio.jpg" />
+            <Profile name="Sarah Wasim" role="Developer" src="/octavio.jpg" />
+            <Profile name="Jojo Lam" role="Developer" src="/jojo.JPG"/>
+            <Profile name="Octavio" role="Developer" src="/octavio.jpg" />
+            <Profile name="Sarah" role="Developer" src="/octavio.jpg" />
+       
             
           </div>
         </div>
@@ -195,7 +195,7 @@ export default function Home() {
          
          <h1>Contact Us</h1>
   
-  <Form/>
+  <Form darkstate={darkstate}/>
   
      </div>
       </div>
